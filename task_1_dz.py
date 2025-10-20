@@ -46,7 +46,8 @@
 # Задача 7*. Обмін змінних
 # Користувач вводить два числа. Після цього потрібно “поміняти” їх місцями і вивести результат.
 
-number_1 = float(input("Enter number 1:"))
-number_2 = float(input("Enter number 2:"))
-print("number 1: ", number_2)
-print("number 2: ", number_1)
+# number_1 = float(input("Enter number 1:"))
+# number_2 = float(input("Enter number 2:"))
+# print("number 1: ", number_2)
+# print("number 2: ", number_1)
+
