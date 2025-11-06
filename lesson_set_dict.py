@@ -64,11 +64,78 @@ def task4():
 
 # 5. Створіть словник, в кому ключі – назви днів тижня, а значення - цілі числа, що позначають порядковий номер дня тижня від 0 до 6. Надрукуйте назву дня за введеним порядковим номером дня. Якщо введений номер виходить за межі, програма жодних повідомлень не друкує і не повідомляє про помилку.
 
-weeks = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-days = [i for i in range(7)]
+# weeks = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+# days = [i for i in range(7)]
 
-# week_dict = {}
-# for day in range(7):
-#     week_dict[weeks[day]] = days[day]
+# # week_dict = {}
+# # for day in range(7):
+# #     week_dict[weeks[day]] = days[day]
 
-week_dict
+# week_dict
+
+
+# 6 . Напишіть програму для створення словника із введеного рядка символів для підрахунку кількості символів.
+def task_6():
+    text = "Lorem ipsum dolor sit amet" # створюємо змінну text і присвоюємо їй рядок із текстом
+    text = list(text) # перетворюємо рядок у список символів, щоб кожна літера і пробіл стали окремими елементами
+
+    letters = {i: text.count(i)# створюємо словник: ключ — символ, значення — кількість його повторень у списку
+            for i in text}# проходимо по кожному символу в списку text
+
+    print(letters) # виводимо отриманий словник із підрахованими символами на екран
+
+    # for key in [1, 2, 3]:
+    #     d[key] = 0
+
+# 7. Напишіть програму, яка приймає рядок символів, і обчислює кількість букв і цифр.
+def task_7():
+    text = "Project Gutenberg offers over 59,000 free eBooks"
+
+    number_count = 0
+    alpha_count = 0
+
+    for ch in text:
+        if ch.isdigit():
+            number_count += 1
+        elif ch.isalpha():
+            alpha_count += 1
+
+    result = {
+        "LETTERS": alpha_count,
+        "DIGITS" : number_count
+    }
+
+    # print(result)
+    for key, value in result.items():
+        print(key, value)
+
+
+# 10. Дано два списки чисел. Порахуйте, скільки унікальних цифр міститься в обох з них.
+def task_10():
+    numbers_1 = [1, 5, 3, 8, 0, 1]
+    numbers_2 = [23, 9, 0, 1, 5]
+
+    result = len(set(numbers_1 + numbers_2))
+
+# ------------------------------------
+#об'єднання множин
+# numbers_1 = {1, 5, 3, 8, 0, 1}
+# numbers_2 = {23, 9, 0, 1, 5}
+
+# print(numbers_1.union(numbers_2))   # a | b
+# print(numbers_1 | numbers_2)
+
+# # A - B = A (без B)
+# print(numbers_1.difference(numbers_2))
+# print(numbers_1 - numbers_2)
+
+
+# print(numbers_1.symmetric_difference(numbers_2))
+# print(numbers_1 ^ numbers_2)
+
+
+
+
+#****************************************************
+
+
